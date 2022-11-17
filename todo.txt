@@ -1,0 +1,12 @@
+WebPage --- name is not defined yet
+
+
+- Page describing corruption and types
+DONE - Information about how corruption policies are implemented in firms.
+DONE - Form to report corrupt acts. 
+
+
+
+SURELY NOT -- Deployed and be working publicly (Be authorized first)
+DONE -- Connected to a real Database DONE
+-- Page is already being developed using HTML, CSS and JS => https://ibb.co/9Z1nTbx

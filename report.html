@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="./scripts/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="./styles/style.css">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/4/47/Logo_del_ITESM.svg" type="image/x-icon">
+    <title>Anticorrupcion</title>
+    <script type="module">
+
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
+        
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+        function uploadDataToFirebase(){
+            if (name.value == "" || mail.value == "" || institucion.value == "" || problema.value == ""){
+                alert("Por favor, llena los datos necesarios para poder registrarlos.")
+            }
+            else {
+                console.log(name.value);
+                set(ref(db, "Reportes/"), {
+                    Nombre : name.value,
+                    Correo : mail.value,
+                    Institucion : institucion.value,
+                    Problema : problema.value
+                })
+                .then(()=>{
+                    alert("Tus datos han sido procesados y enviados correctamente.")
+                })
+                .catch((error)=>{
+                    alert(error)
+                })
+            }
+            
+        }
+
+        function uploadFirestore(){
+            if (name.value == "" || mail.value == "" || institucion.value == "" || problema.value == ""){
+                alert("Por favor, llena los datos necesarios para poder registrarlos.")
+                var uploadButton = document.querySelector('#reporter')
+                uploadButton.setAttribute("style", "background-color: rgb(22, 85, 167);")
+            } else {
+                try {
+                    const docRef = addDoc(collection(firestore, "reportes"), {
+                        Nombre : name.value,
+                        Correo : mail.value,
+                        Institucion : institucion.value,
+                        Problema : problema.value
+                    });
+                    console.log("Document written with ID: ", docRef.id);
+                    alert("Tus datos han sido procesados y enviados correctamente.")
+                    name.value = ""
+                    mail.value = ""
+                    institucion.value = ""
+                    problema.value = ""
+                    } catch (e) {
+                    console.error("Error adding document: ", e);
+                    }
+            }
+        }
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCCOurasRZhU_OORzWe7Ao6YhRlgjBn7GE",
+            authDomain: "anticorrupcion-c9b0b.firebaseapp.com",
+            projectId: "anticorrupcion-c9b0b",
+            storageBucket: "anticorrupcion-c9b0b.appspot.com",
+            messagingSenderId: "901281971394",
+            appId: "1:901281971394:web:ae51e152867a169c380f5b"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        
+        import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-database.js";
+        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js"
+
+        const db = getDatabase(app);
+        const firestore = getFirestore(app);
+
+        var name = document.querySelector("#name")
+        var mail = document.querySelector("#mail")
+        var institucion = document.querySelector("#institucion")
+        var problema = document.querySelector("#problema-a-reportar")
+
+        var uploadButton = document.querySelector('#reporter')
+        uploadButton.addEventListener('click', uploadFirestore)
+    </script>
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="./index.html">Home</a>
+        <a href="./combat.html">Fighting corruption</a>
+        <a class="active">Reports</a>
+        <a href="javascript:void(0);" class="icon" onclick="responsiveNavBar()">
+            <img src="https://javier.rodriguez.org.mx/itesm/2014/simbolo-tec-white.png" height="25px">
+        </a>
+      </div>
+    <div class="report-top">
+        <p class="top-text">Report a corruption act you were witness of.</p>
+    </div>
+    <div class="form-container">
+        <form id="myForm" class="report-form" action="" onsubmit="onFormSubmit();">
+            <input type="text" id="name" placeholder="Your full name here">
+            <input type="text" id="mail" placeholder="E-mail">
+            <input type="text" id="institucion" placeholder="Institution name">
+            <!-- <input type="text" id="problema-a-reportar" placeholder="Nombre de tu institucion"> -->
+            <textarea id="problema-a-reportar" cols="40" rows="5" placeholder="Describe the situation in a very detailed way"></textarea>
+            <button id="reporter">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

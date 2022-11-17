@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./scripts/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="./styles/style.css">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/4/47/Logo_del_ITESM.svg" type="image/x-icon">
+    <title>Anticorrupcion</title>  
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="./index.html">Home</a>
+        <a class="active">Fighting corruption</a>
+        <a href="./report.html">Reports</a>
+        <a href="javascript:void(0);" class="icon" onclick="responsiveNavBar()">
+            <img src="https://javier.rodriguez.org.mx/itesm/2014/simbolo-tec-white.png" height="25px">
+        </a>
+      </div>
+      <div class="image-text-container">
+        <img src="https://www.undp.org/sites/g/files/zskgke326/files/styles/banner_image_desktop/public/migration/latinamerica/UNDP-RBLAC-Corruption.jpg?h=6cf96852&itok=5w2A6Dfj">
+        <div id="big-top" class="centered-image-text">COMBAT</div>
+    </div>
+    <div class="combat-top-container">
+        <p class="combat-top-text">
+            Corruption is a threat to sustainable development and fair business practices.
+            Organizations that fight corruption exist all over the world.
+        </p>
+    </div>
+    
+    <div class="box">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Seal_of_the_Organization_of_American_States_%28_In_Spanish%29.svg/220px-Seal_of_the_Organization_of_American_States_%28_In_Spanish%29.svg.png">
+        <p>
+            The Organization of American States was established in order to achieve among its member 
+            states—as stipulated in Article 1 of the Charter—"an order of peace and justice, to promote 
+            their solidarity, to strengthen their collaboration, and to defend their sovereignty, their 
+            territorial integrity, and their independence."
+        </p>
+        <button onclick="window.open('https://www.oas.org/en/sla/dil/inter_american_treaties_B-58_against_Corruption.asp', '_blank')">Learn more</button>
+    </div>
+    <div class="box">
+        <img src="https://pngimg.com/uploads/un/un_PNG20.png">
+        <p>
+            The UN Convention against Corruption (UNCAC) was adopted by the General Assembly through 
+            resolution 58/4 in 2003 and entered into force in December 2005. It presents a comprehensive 
+            set of standards, measures and rules that all state parties to the convention should apply to 
+            strengthen their legal and regulatory regimes to fight corruption.
+        </p>
+        <button onclick="window.open('https://www.un.org/ruleoflaw/thematic-areas/governance/corruption/', '_blank')">Learn more</button>
+        
+    </div>
+    <div class="box">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/US-InternationalTradeAdministration-Seal.svg/1200px-US-InternationalTradeAdministration-Seal.svg.png">
+        <p>
+            The Foreign Corrupt Practices Act (FCPA, the Act) is a United States law that prohibits U.S. 
+            firms and individuals from paying bribes to foreign officials to further business deals.
+            Both the Securities and Exchange Commission (SEC) and the Department of Justice (DOJ) 
+            are responsible for enforcing the FCPA.
+        </p>
+        <button onclick="window.open('https://www.trade.gov/us-foreign-corrupt-practices-act', '_blank')">Learn more</button>
+    </div>
+
+    <div class="slideshow-top-container">
+        <div class="slideshow-question">
+            What can WE do as individuals?
+        </div>
+        <div class="slideshow-buttons">
+            <button onclick="slideshowChanger(0)">1</button>
+            <button onclick="slideshowChanger(1)">2</button>
+            <button onclick="slideshowChanger(2)">3</button>
+            <button onclick="slideshowChanger(3)">4</button>
+        </div>
+    </div>
+    
+    <div class="slideshow">
+        <img id="slideshow-image" src="./src/rights.jpg" alt="Press on the numbers to change slide.">
+        <div class="slideshow-text-container">
+            <div id="slideshow-header">Claim our rights</div>
+            <div id="slideshow-body">
+                Be aware that there are multiple types when it comes to corruption.
+                IMCO’s Anticorruption Director Max Kaiser pointed out: “There is no way
+                that this country can change if we believe that corruption is only about
+                bribing a police officer. For a lot of Mexicans, that is the only type of corruption.”
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
