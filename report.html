@@ -39,7 +39,7 @@
 
         function uploadFirestore(){
             if (name.value == "" || mail.value == "" || institucion.value == "" || problema.value == ""){
-                alert("Por favor, llena los datos necesarios para poder registrarlos.")
+                alert("Please, fill out the form to complete your report.")
                 var uploadButton = document.querySelector('#reporter')
                 uploadButton.setAttribute("style", "background-color: rgb(22, 85, 167);")
             } else {
@@ -51,13 +51,14 @@
                         Problema : problema.value
                     });
                     console.log("Document written with ID: ", docRef.id);
-                    alert("Tus datos han sido procesados y enviados correctamente.")
+                    alert("Your info has been processed and sent to our database.");
                     name.value = ""
                     mail.value = ""
                     institucion.value = ""
                     problema.value = ""
                     } catch (e) {
                     console.error("Error adding document: ", e);
+                    alert("There was an error submitting your form.")
                     }
             }
         }
