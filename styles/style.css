@@ -9,25 +9,6 @@ body {
   padding: 0;
 }
 
-/* #presentation-top-text {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: x-large;
-    color: azure;
-    font: xx-large;
-    font-size: 12vw;
-    margin-top: 20px;
-    text-align: center;
-}
-
-#invitation {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: x-large;
-    color: azure;
-    font-size: 3vw;
-    margin-top: 20px;
-    text-align: center;
-} */
-
 .topnav {
     overflow: hidden;
     background-color: rgb(22, 85, 167);
@@ -82,12 +63,109 @@ body {
   .define-corruption p {
     width: 85%;
     color: rgb(54, 54, 54);
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
   }
+
+  .types-header {
+    margin-left: 5%;
+    color: rgb(22, 85, 167);
+    font-size: 4vh;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .block{
+    display: grid;
+    grid-template-columns: 60% 5% 30% 10%;
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 100%;
+    margin-bottom: 5%;
+
+  }
+
+  .info-elements {
+    color: #363636;
+    background-color: rgb(241, 241, 241);
+    width: 100%;
+    margin-right: 10%;
+    border-radius: 2%;
+  }
+
+  .types-container {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: auto;
+  }
+
+  .corruption-type {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 100%;
+  }
+
+  .title {
+    font-size: 3.25vh;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .body {
+    font-size: 2.5vh;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .jojo-github {
+    background-color: #12171f;
+    border-radius: 3%;
+    width: 100%;
+    margin-right: 0px;
+    
+  }
+
+  .jojo-github img {
+    width: 60%;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .jojo-github p {
+    font-size: 1.5vw;
+    width: 90%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    display: block;
+    color: #ddd;
+  }
+
+  .jojo-github a {
+    text-decoration: none;
+    color: #ddd;
+  }
+
+  .jojo-github a:hover {
+    text-decoration: underline;
+  }
+
+  .jojo-github div {
+    margin-top: 100px;
+  }
+
+  #git {
+    width: 8%;
+  }
+
+
 
   .slideshow-top-container {
     display: block;
@@ -168,10 +246,23 @@ body {
     font-weight: bold;
   }
 
+  .orgs-container {
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(241, 241, 241);
+    padding-bottom: 1px;
+    padding-top: 50px;
+    padding-left: 10px;
+    width: 80%;
+    border-style: solid;
+    border-radius: 1%;
+  }
+
 
   .box {
     display: flex;
-    width: 75%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 50px;
@@ -218,7 +309,7 @@ body {
     background-color: rgb(177, 176, 176);
   }
   
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 800px) {
     .topnav a:not(:active) {display: none;}
     .topnav a.icon {
       float: right;
@@ -227,7 +318,7 @@ body {
     
   }
   
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 800px) {
     
     .topnav.responsive {position: relative;}
     .topnav.responsive .icon {
@@ -269,8 +360,18 @@ body {
       margin-right: auto;
     }
 
+    .orgs-container {
+      width: 90%;
+    }
+
     .slideshow {
       display: block;
+      width: 80%;
+    }
+
+    .slideshow-buttons button {
+      width: 60px;
+      height: 60px;
     }
 
     .slideshow #slideshow-image {
@@ -312,6 +413,48 @@ body {
       margin-right: auto;
 
     }
+
+
+
+    .block {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      grid-template-columns: none;
+    }
+
+    .jojo-github {
+      padding-top: 10px;
+      margin-top: 5%;
+      padding-bottom: 10px;
+    }
+
+    .jojo-github img {
+      margin-top: 20px;
+      width: 30%;
+    }
+
+    .jojo-github div {
+      display: block;
+      margin-top: 2%;
+      
+    }
+
+    .jojo-github p {
+      font-size: 3vh;
+    }
+
+    #git {
+      width: 4%;
+    }
+
+    .types-container {
+      padding-top: 1px;
+      padding-bottom: 1px;
+    }
+
+
 
   }
 
@@ -382,8 +525,8 @@ body {
 
 .form-container {
   display: flex;
-  max-width: 75%;
-  width: 75%;
+  max-width: 65%;
+  width: 65%;
   margin-left: auto;
   margin-right: auto;
   align-items: center;
@@ -392,6 +535,14 @@ body {
   border-radius: 5px;
   padding: 10px;
   margin-bottom: 2vw;
+}
+
+@media screen and (max-width: 800px) {
+
+  .form-container {
+    max-width: 95%;
+    width: 95%;
+  }
 }
 
 .report-form {
@@ -500,8 +651,4 @@ body {
   font-weight: bold;
   font-style: italic;
   position: fixed;
-}
-
-::selection {
-  background-color: none;
 }
