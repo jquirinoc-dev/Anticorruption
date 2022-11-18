@@ -534,7 +534,7 @@ body {
   flex-direction: column;
   border-radius: 5px;
   padding: 10px;
-  margin-bottom: 2vw;
+  margin-bottom: 10%;
 }
 
 @media screen and (max-width: 800px) {
@@ -651,4 +651,28 @@ body {
   font-weight: bold;
   font-style: italic;
   position: fixed;
+}
+
+
+.bottom-button {
+  text-align: center;
+  margin-bottom: 10%;
+}
+
+.bottom-button button {
+  margin-left: auto;
+  margin-bottom: auto;
+  background-color: rgb(58, 114, 188);
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.25rem;
+}
+
+.bottom-button button:hover {
+  background-color: rgb(153, 153, 174);
 }
