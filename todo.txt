@@ -1,10 +1,12 @@
 WebPage --- name is not defined yet
 
 
-- Page describing corruption and types
+DONE- Page describing corruption and types
 DONE - Information about how corruption policies are implemented in firms.
 DONE - Form to report corrupt acts. 
 
+
+-- I may add buttons at the bottom each page for UX
 
 
 SURELY NOT -- Deployed and be working publicly (Be authorized first)
